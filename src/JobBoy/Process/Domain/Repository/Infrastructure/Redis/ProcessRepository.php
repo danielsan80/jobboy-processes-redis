@@ -3,7 +3,6 @@
 namespace JobBoy\Process\Domain\Repository\Infrastructure\Redis;
 
 use Assert\Assertion;
-use JobBoy\Clock\Domain\Clock;
 use JobBoy\Process\Domain\Entity\Id\ProcessId;
 use JobBoy\Process\Domain\Entity\Infrastructure\TouchCallback\Process as TouchCallbackProcess;
 use JobBoy\Process\Domain\Entity\Process;
@@ -31,12 +30,13 @@ class ProcessRepository implements ProcessRepositoryInterface
         }
         $this->namespace = $namespace;
 
-        $this->touchCallback = function(Process $process) {
+        $this->touchCallback = function (Process $process) {
             $this->onTouch($process);
         };
     }
 
-    protected function onTouch(Process $process) {
+    protected function onTouch(Process $process)
+    {
         $this->_set($process);
     }
 
@@ -123,7 +123,7 @@ class ProcessRepository implements ProcessRepositoryInterface
     {
         $process = $this->redis->hget($this->namespace, $id);
 
-        if ($process===false) {
+        if ($process === false) {
             return null;
         }
 
@@ -141,7 +141,7 @@ class ProcessRepository implements ProcessRepositoryInterface
     protected function _all(): array
     {
         $processes = $this->redis->hGetAll($this->namespace);
-        array_walk($processes, function($process) {
+        array_walk($processes, function ($process) {
             $process->addTouchCallback($this->touchCallback);
         });
         return $processes;
