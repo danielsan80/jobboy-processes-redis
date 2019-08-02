@@ -16,6 +16,7 @@
     },
     "require-dev": {
         "dansan/fixture-handler": "*",
+        "nesbot/carbon": "^2.0",
         "mockery/mockery": "dev-master",
         "symfony/dotenv": "^4.2",
         "symfony/phpunit-bridge": "*",
