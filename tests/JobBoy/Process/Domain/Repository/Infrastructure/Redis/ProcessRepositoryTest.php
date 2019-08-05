@@ -7,23 +7,12 @@ use JobBoy\Process\Domain\Entity\Infrastructure\TouchCallback\Process;
 use JobBoy\Process\Domain\Repository\Infrastructure\Redis\ProcessRepository;
 use JobBoy\Process\Domain\Repository\Infrastructure\Redis\RedisFactory;
 use JobBoy\Process\Domain\Repository\ProcessRepositoryInterface;
+use JobBoy\Process\Domain\Repository\Test\ProcessRepositoryInterfaceTest;
 use Ramsey\Uuid\Uuid;
-use Tests\JobBoy\Process\Domain\Repository\ProcessRepositoryInterfaceTest;
-use Tests\JobBoy\Test\Util\FsUtil;
 
 class ProcessRepositoryTest extends ProcessRepositoryInterfaceTest
 {
 
-    /**
-     * @test
-     */
-    public function class_ProcessRepositoryInterfaceTest_is_correct()
-    {
-        $this->assertFileEquals(
-            __DIR__.'/../../ProcessRepositoryInterfaceTest.php',
-            FsUtil::projectDir().'/vendor/dansan/jobboy/tests/JobBoy/Process/Domain/Repository/ProcessRepositoryInterfaceTest.php'
-        );
-    }
 
     protected function createRepository(): ProcessRepositoryInterface
     {
