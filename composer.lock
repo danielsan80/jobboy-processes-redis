@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63cf8fb0a7301fe475daefa58f1fc498",
+    "content-hash": "50077721c524470e5764c907733b40aa",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -70,16 +70,16 @@
         },
         {
             "name": "dansan/jobboy",
-            "version": "0.2.12",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/danielsan80/jobboy.git",
-                "reference": "d45bd3e2044534505993d9841ef8445c5a17c29f"
+                "reference": "e150ab7690cc903c40f79b4b5876db2c82dac60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danielsan80/jobboy/zipball/d45bd3e2044534505993d9841ef8445c5a17c29f",
-                "reference": "d45bd3e2044534505993d9841ef8445c5a17c29f",
+                "url": "https://api.github.com/repos/danielsan80/jobboy/zipball/e150ab7690cc903c40f79b4b5876db2c82dac60f",
+                "reference": "e150ab7690cc903c40f79b4b5876db2c82dac60f",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +99,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2.x-dev"
+                    "dev-0.2": "0.2.x-dev",
+                    "dev-master": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -118,7 +119,7 @@
                 }
             ],
             "description": "It's a little jobman... a little job manager",
-            "time": "2020-02-07T12:37:46+00:00"
+            "time": "2020-03-10T11:14:30+00:00"
         },
         {
             "name": "paragonie/random_compat",
